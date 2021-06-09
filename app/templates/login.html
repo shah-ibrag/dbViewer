@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Simple Login Form</title>
+<meta charset="UTF-8" />
+<meta name="Designer" content="PremiumPixels.com">
+<meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/reset.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/structure.css') }}">
+
+</head>
+
+<body>
+<form class="box login" method="post" novalidate>
+	{{ form.hidden_tag()}}
+	<fieldset class="boxBody">
+	  <label>Username</label>
+	  <input name = "username" type="text" tabindex="1" placeholder="PremiumPixel">
+	  <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
+	  <input name = "password"type="password" tabindex="2" required>
+	</fieldset>
+	<footer>
+	  <label><input name = "remember_me" type="checkbox" tabindex="3">Keep me logged in</label>
+	  <input name = "submit" type="submit" class="btnLogin" value="Login" tabindex="4">
+	</footer>
+</form>
+</body>
+</html>

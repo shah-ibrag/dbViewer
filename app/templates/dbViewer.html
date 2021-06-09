@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DB Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/dbViewer.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h2>Database Viewer</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+          {% for item in listColumns %}
+            <th>{{ item }}</th>
+          {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          {% for item in listInfo %}
+            <td>{{ item }}</td>
+          {% endfor %}
+        </tr>
+        <tbody>
+    </table>
+</div>
+</body>
+</html>
