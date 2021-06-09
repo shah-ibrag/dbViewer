@@ -27,9 +27,5 @@ def select_names_tables(conn):
     c.execute('PRAGMA table_info(employees)')
     return [i[1] for i in c.fetchall()]
 
-if __name__ == '__main__':
-    dbFile = 'chinook.db'
-    data = select_all()
-    print(data)
 
 
